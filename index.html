@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: an alpine tightrope adventure.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-iTQomleb.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-CeQ9Awto.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DlcY_0FB.css">
+  <script type="module" crossorigin src="./assets/index-fkOako2Y.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-BXJuwSqv.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-B0kmiL9m.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="Alpine tightrope crossing"></div>
@@ -58,17 +58,18 @@
   </section>
 
   <aside class="movement-hud gameplay-hud" aria-label="Movement state">
-    <div class="motion-gauge" title="Pace: mouse forward/back or W/S">
+    <div class="motion-gauge" title="Pace: scroll up to accelerate, down to slow; W/S">
       <div class="motion-caption"><span>PACE</span><strong id="hud-speed">1.2 m/s</strong></div>
       <div class="motion-track"><div id="speed-fill"></div><span id="speed-target"></span></div>
     </div>
-    <div class="motion-gauge" title="Pole height: wheel forward raises, wheel back lowers; E/Q">
+    <div class="motion-gauge" title="Pole height: mouse up raises, mouse down lowers; E/Q">
       <div class="motion-caption"><span>POLE</span><strong id="hud-pole">MID / 50%</strong></div>
       <div class="motion-track pole-track"><div id="pole-fill"></div><span id="pole-target"></span></div>
     </div>
-    <div class="motion-gauge" title="Stamina">
-      <div class="motion-caption"><span>STAMINA</span><strong id="hud-stamina">100%</strong></div>
-      <div class="motion-track"><div id="stamina-fill"></div></div>
+    <div class="motion-gauge" id="fatigue-gauge" title="Fatigue">
+      <div class="motion-caption"><span>FATIGUE</span><strong id="hud-fatigue">0%</strong></div>
+      <div id="fatigue-meter" class="motion-track" role="meter" aria-label="Player fatigue" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Fresh"><div id="fatigue-fill"></div></div>
+      <div id="hud-fatigue-state" class="fatigue-state">FRESH</div>
     </div>
   </aside>
   <footer class="balance-hud gameplay-hud">
