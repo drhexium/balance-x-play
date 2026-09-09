@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-BZk6JcVQ.js"></script>
+  <script type="module" crossorigin src="./assets/index-CY3p21j-.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-CmCZwQYT.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DoHFyUjh.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-Bg4D0Ugf.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
@@ -36,7 +36,7 @@
   <aside class="telemetry gameplay-hud">
     <div><span class="eyebrow">ELEVATION</span><strong><span id="hud-altitude">30</span><small> m</small></strong></div>
     <div><span class="eyebrow">CROSSWIND</span><strong class="wind-reading"><i id="hud-wind-arrow" data-lucide="arrow-left"></i><span id="hud-wind-value">0</span><small> km/h</small></strong></div>
-    <div><span class="eyebrow">TIME</span><strong id="hud-time">00:00</strong></div>
+    <div><span class="eyebrow">TIME LEFT</span><strong id="hud-time" role="timer" aria-label="Time remaining">01:05</strong></div>
   </aside>
 
   <section id="modal-start" class="start-screen active" aria-labelledby="start-title">
@@ -47,7 +47,7 @@
       <p id="start-subtitle" class="route-subtitle">Rooftop terraces / Morning breeze</p>
       <div class="route-stats">
         <div><strong id="start-length">35<small>m</small></strong><span>SPAN</span></div>
-        <div><strong id="start-height">30<small>m</small></strong><span>HEIGHT</span></div>
+        <div><strong id="start-time-limit">01:05</strong><span>TIME LIMIT</span></div>
         <div><strong id="start-best">0<small>%</small></strong><span>PERSONAL BEST</span></div>
       </div>
       <button id="btn-start-game" class="btn-primary"><span>Begin crossing</span><i data-lucide="arrow-up-right"></i></button>
@@ -103,7 +103,7 @@
   </section>
   <section id="modal-gameover" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="gameover-title" inert>
     <div class="result-panel">
-      <i class="result-icon coral" data-lucide="wind"></i><span class="eyebrow">OFF THE WIRE</span>
+      <i class="result-icon coral" data-lucide="wind"></i><span class="eyebrow">ATTEMPT ENDED</span>
       <h2 id="gameover-title">So close.</h2>
       <div id="gameover-stats" class="result-stat"></div>
       <button id="btn-retry-game" class="btn-primary"><span>Try again</span><i data-lucide="rotate-ccw"></i></button>
