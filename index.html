@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#244c42">
-  <meta name="description" content="Balance-X: an alpine tightrope adventure.">
+  <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-fkOako2Y.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-BXJuwSqv.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-B0kmiL9m.css">
+  <script type="module" crossorigin src="./assets/index-cEn19Fpo.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-CfQVXiZI.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DoHFyUjh.css">
 </head>
 <body data-state="MENU">
-  <div id="canvas-container" aria-label="Alpine tightrope crossing"></div>
+  <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
   <div class="scene-shade"></div>
   <div id="danger-vignette"></div>
 
@@ -21,11 +21,11 @@
       <i data-lucide="mountain"></i><span>BALANCE<span class="brand-x">/ X</span></span>
     </a>
     <div class="route-progress gameplay-hud">
-      <div class="progress-caption"><span id="hud-level-title">Morning Span</span><span id="hud-distance-text">0 / 35 m</span></div>
+      <div class="progress-caption"><span id="hud-level-title">Skyline Gardens</span><span id="hud-distance-text">0 / 35 m</span></div>
       <div class="progress-track"><div id="hud-progress-fill"></div></div>
     </div>
     <div class="tools">
-      <span class="edition menu-only">ALPINE EXPEDITION / 01</span>
+      <span class="edition menu-only">WORLD CROSSINGS / 05</span>
       <button class="icon-btn gameplay-hud" id="btn-pause" title="Pause (P)" aria-label="Pause"><i data-lucide="pause"></i></button>
       <button class="icon-btn" id="btn-mute" title="Mute (M)" aria-label="Mute sound" aria-pressed="false"><i data-lucide="volume-2"></i></button>
       <button class="icon-btn" id="btn-settings" title="Settings" aria-label="Settings"><i data-lucide="sliders-horizontal"></i></button>
@@ -43,17 +43,18 @@
     <div class="start-content">
       <div class="eyebrow expedition-label"><span class="status-dot"></span> ABOVE IT ALL</div>
       <h1 id="start-title">BALANCE<span>/ X</span></h1>
-      <div class="route-heading"><span id="start-number">01</span><h2 id="start-level">Morning Span</h2></div>
-      <p id="start-subtitle" class="route-subtitle">The Training Wire</p>
+      <div class="route-heading"><span id="start-number">01</span><h2 id="start-level">Skyline Gardens</h2></div>
+      <p id="start-subtitle" class="route-subtitle">Rooftop terraces / Morning breeze</p>
       <div class="route-stats">
         <div><strong id="start-length">35<small>m</small></strong><span>SPAN</span></div>
         <div><strong id="start-height">30<small>m</small></strong><span>HEIGHT</span></div>
         <div><strong id="start-best">0<small>%</small></strong><span>PERSONAL BEST</span></div>
       </div>
       <button id="btn-start-game" class="btn-primary"><span>Begin crossing</span><i data-lucide="arrow-up-right"></i></button>
+      <p id="location-status" role="status"></p>
       <div class="route-difficulty"><span id="difficulty-label">01 / EASY</span><span id="difficulty-bars" class="difficulty-bars" aria-hidden="true"></span></div>
     </div>
-    <div class="scene-caption"><span class="caption-line"></span><span>THE HIGH COUNTRY<br><strong>One wire. All the way across.</strong></span></div>
+    <div class="scene-caption"><span class="caption-line"></span><span><span id="location-caption">THE CITY ABOVE</span><br><strong>One wire. All the way across.</strong></span></div>
     <nav id="route-list" class="route-list" aria-label="Choose a crossing"></nav>
   </section>
 
