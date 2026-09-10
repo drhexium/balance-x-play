@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-C8XqiSY1.js"></script>
+  <script type="module" crossorigin src="./assets/index-D9IqGAZB.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-BizGhDwe.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-Jxfr8LZj.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-BbVwfBNX.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
@@ -158,6 +158,10 @@
       <label class="setting-label" for="quality">Render quality</label>
       <select id="quality"><option value="high">High</option><option value="standard">Standard</option></select>
       <label class="toggle-row" for="audio-enabled">Sound<input id="audio-enabled" type="checkbox" checked></label>
+      <label class="setting-label" for="music-volume">Music<output id="music-volume-value">45%</output></label>
+      <input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.45">
+      <label class="setting-label" for="effects-volume">Sound effects<output id="effects-volume-value">80%</output></label>
+      <input id="effects-volume" type="range" min="0" max="1" step="0.05" value="0.8">
     </div>
   </section>
   <div id="fatal-error" role="alert" hidden></div>
