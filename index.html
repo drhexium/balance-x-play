@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-BbgOTuzJ.js"></script>
+  <script type="module" crossorigin src="./assets/index-C8XqiSY1.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-BizGhDwe.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-Cx_9DKjC.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-Jxfr8LZj.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
@@ -28,6 +28,7 @@
       <span class="edition menu-only">WORLD CROSSINGS / 05</span>
       <button class="icon-btn gameplay-hud" id="btn-pause" title="Pause (Space / P)" aria-label="Pause" aria-keyshortcuts="Space P"><i data-lucide="pause"></i></button>
       <button class="icon-btn" id="btn-mute" title="Mute (M)" aria-label="Mute sound" aria-pressed="false"><i data-lucide="volume-2"></i></button>
+      <button class="icon-btn" id="btn-scoreboard" title="Best times" aria-label="Best times"><i data-lucide="trophy"></i></button>
       <button class="icon-btn" id="btn-settings" title="Settings" aria-label="Settings"><i data-lucide="sliders-horizontal"></i></button>
       <button class="icon-btn fullscreen-btn" id="btn-fullscreen" title="Full screen" aria-label="Enter full screen"><i data-lucide="maximize"></i></button>
     </div>
@@ -104,6 +105,7 @@
       <h2 id="pause-title">On hold.</h2>
       <button id="btn-resume" class="btn-primary"><span>Resume crossing</span><i data-lucide="play"></i></button>
       <div class="result-actions"><button id="btn-quick-restart" class="text-btn"><i data-lucide="rotate-ccw"></i>Restart</button><button class="text-btn" data-menu><i data-lucide="map"></i>Routes</button></div>
+      <button id="btn-pause-scores" class="text-btn"><i data-lucide="trophy"></i>Best times</button>
     </div>
   </section>
   <section id="modal-gameover" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="gameover-title" inert>
@@ -112,7 +114,7 @@
       <h2 id="gameover-title">So close.</h2>
       <div id="gameover-stats" class="result-stat"></div>
       <button id="btn-retry-game" class="btn-primary"><span>Try again</span><i data-lucide="rotate-ccw"></i></button>
-      <button class="text-btn" data-menu><i data-lucide="map"></i>All crossings</button>
+      <div class="result-actions"><button id="btn-gameover-scores" class="text-btn"><i data-lucide="trophy"></i>Best times</button><button class="text-btn" data-menu><i data-lucide="map"></i>All crossings</button></div>
     </div>
   </section>
   <section id="modal-victory" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="victory-title" inert>
@@ -120,8 +122,31 @@
       <i class="result-icon gold" data-lucide="flag-triangle-right"></i><span class="eyebrow">ON SOLID GROUND</span>
       <h2 id="victory-title">Across, at last.</h2>
       <div id="victory-stats" class="result-stat"></div>
+      <form id="score-name-form" class="score-name-form">
+        <label for="score-player-name">Player name <span>(optional)</span></label>
+        <div class="score-name-controls">
+          <input id="score-player-name" type="text" maxlength="24" autocomplete="nickname" placeholder="Anonymous">
+          <button id="btn-save-score-name" type="submit" class="icon-btn" title="Save name" aria-label="Save name"><i data-lucide="check"></i></button>
+        </div>
+      </form>
+      <p id="score-save-status" class="score-status" role="status"></p>
       <button id="btn-next-level" class="btn-primary"><span>Next crossing</span><i data-lucide="arrow-right"></i></button>
-      <button class="text-btn" data-menu><i data-lucide="map"></i>All crossings</button>
+      <div class="result-actions"><button id="btn-victory-scores" class="text-btn"><i data-lucide="trophy"></i>Best times</button><button class="text-btn" data-menu><i data-lucide="map"></i>All crossings</button></div>
+    </div>
+  </section>
+  <section id="modal-scoreboard" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="scoreboard-title" inert>
+    <div class="result-panel scoreboard-panel">
+      <button id="btn-close-scoreboard" class="icon-btn close-btn" title="Close best times" aria-label="Close best times"><i data-lucide="x"></i></button>
+      <span class="eyebrow">THIS BROWSER / TOP 10</span>
+      <h2 id="scoreboard-title">Best times</h2>
+      <label class="setting-label" for="scoreboard-route">Crossing</label>
+      <select id="scoreboard-route"></select>
+      <table class="score-table">
+        <thead><tr><th scope="col" aria-label="Rank">#</th><th scope="col">Player</th><th scope="col">Time</th></tr></thead>
+        <tbody id="scoreboard-rows"></tbody>
+      </table>
+      <p id="scoreboard-empty" class="score-empty">No completed crossings yet.</p>
+      <p id="scoreboard-storage" class="score-status" role="status"></p>
     </div>
   </section>
   <section id="modal-settings" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="settings-title" inert>
