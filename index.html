@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-DB4k_nkg.js"></script>
+  <script type="module" crossorigin src="./assets/index-BR8UlWEI.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-CN8l-9u_.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-k8PmtTHk.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-C-deWrhE.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
@@ -65,7 +65,7 @@
   </section>
 
   <aside class="movement-hud gameplay-hud" aria-label="Movement state">
-    <div class="motion-gauge" title="Pace: scroll up to accelerate, down to slow; W/S">
+    <div class="motion-gauge" title="Hold left mouse / S to stop; right mouse / W to hurry">
       <div class="motion-caption"><span>PACE</span><strong id="hud-speed">1.2 m/s</strong></div>
       <div class="motion-track"><div id="speed-fill"></div><span id="speed-target"></span></div>
     </div>
@@ -95,7 +95,10 @@
     <button data-steer="1" aria-label="Lean right" title="Lean right"><i data-lucide="arrow-right"></i></button>
   </div>
   <div class="touch-motion gameplay-hud">
-    <label for="touch-pace"><span>PACE</span><input id="touch-pace" type="range" min="0" max="1.8" step="0.02" value="1" aria-label="Walking pace"></label>
+    <div class="pace-holds">
+      <button data-pace-mode="stop" aria-label="Hold to stop walking" title="Hold to stop walking"><i data-lucide="pause"></i></button>
+      <button data-pace-mode="hurry" aria-label="Hold to hurry" title="Hold to hurry"><i data-lucide="fast-forward"></i></button>
+    </div>
     <label for="touch-pole"><span>POLE HEIGHT</span><input id="touch-pole" type="range" min="0" max="1" step="0.02" value="0.5" aria-label="Pole height"></label>
   </div>
 
