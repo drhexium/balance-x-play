@@ -7,9 +7,9 @@
   <meta name="description" content="Balance-X: five tightrope crossings from city rooftops to stormbound ships.">
   <title>Balance-X | Above It All</title>
   <link rel="icon" href="data:,">
-  <script type="module" crossorigin src="./assets/index-CMiOVoSc.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-C33ZutMt.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-g03Tagxp.css">
+  <script type="module" crossorigin src="./assets/index-tDmynIVB.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-BYwhMYeT.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-k8PmtTHk.css">
 </head>
 <body data-state="MENU">
   <div id="canvas-container" aria-label="City rooftop tightrope crossing"></div>
@@ -152,16 +152,20 @@
   <section id="modal-settings" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="settings-title" inert>
     <div class="result-panel settings-panel">
       <button id="btn-close-settings" class="icon-btn close-btn" title="Close settings" aria-label="Close settings"><i data-lucide="x"></i></button>
-      <span class="eyebrow">PREFERENCES</span><h2 id="settings-title">Your balance.</h2>
+      <span class="eyebrow">FIELD EQUIPMENT</span><h2 id="settings-title">Your setup.</h2>
+      <fieldset class="setting-group"><legend>Handling</legend>
       <label class="setting-label" for="sensitivity">Control sensitivity<output id="sensitivity-value">1.0x</output></label>
       <input id="sensitivity" type="range" min="0.4" max="1.8" step="0.1" value="1">
+      </fieldset><fieldset class="setting-group"><legend>Display</legend>
       <label class="setting-label" for="quality">Render quality</label>
       <select id="quality"><option value="high">High</option><option value="standard">Standard</option></select>
+      </fieldset><fieldset class="setting-group"><legend>Audio mix</legend>
       <label class="toggle-row" for="audio-enabled">Sound<input id="audio-enabled" type="checkbox" checked></label>
       <label class="setting-label" for="music-volume">Music<output id="music-volume-value">45%</output></label>
       <input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.45">
       <label class="setting-label" for="effects-volume">Sound effects<output id="effects-volume-value">80%</output></label>
       <input id="effects-volume" type="range" min="0" max="1" step="0.05" value="0.8">
+      </fieldset>
     </div>
   </section>
   <div id="fatal-error" role="alert" hidden></div>
